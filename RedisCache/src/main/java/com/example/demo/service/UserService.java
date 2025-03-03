@@ -33,7 +33,7 @@ public class UserService {
 		repo.save(userDb);
 	}
 
-	@CacheEvict(value = "users", key = "#userId")
+	@CacheEvict(value = "users", allEntries = true)
 	public void deleteUser(Integer userId) {
 		repo.deleteById(userId);
 	}
