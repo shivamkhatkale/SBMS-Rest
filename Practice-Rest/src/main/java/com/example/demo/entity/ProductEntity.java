@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "product_ubi")
-public class Product {
+public class ProductEntity {
 
 	@Id
 	private Integer pid;
 	private String pname;
 	private String pmail;
-	
+
 }
