@@ -5,7 +5,6 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
-
 import com.example.demo.entity.User;
 import com.example.demo.repo.UserRepository;
 

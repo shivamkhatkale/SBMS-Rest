@@ -23,20 +23,17 @@
     </properties>
 
     <dependencies>
-        <!-- Spring Boot Dependencies -->
-        <dependency>
-    <groupId>io.springfox</groupId>
-    <artifactId>springfox-swagger2</artifactId>
-    <version>3.0.0</version>
-</dependency>
+ 
 
-<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
-<dependency>
-    <groupId>com.h2database</groupId>
-    <artifactId>h2</artifactId>
-    <version>2.3.232</version>
-    <scope>test</scope>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+		<dependency>
+		    <groupId>com.h2database</groupId>
+		    <artifactId>h2</artifactId>
+		    <version>2.3.232</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		
 
 
         <dependency>
@@ -77,18 +74,11 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Springdoc OpenAPI for Swagger -->
-        <dependency>
-    <groupId>org.springdoc</groupId>
-    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-    <version>2.3.0</version>
-    <exclusions>
-        <exclusion>
-            <groupId>io.swagger.core.v3</groupId>
-            <artifactId>swagger-core-jakarta</artifactId>
-        </exclusion>
-    </exclusions>
-</dependency>
+       <dependency>
+		    <groupId>org.springdoc</groupId>
+		    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+		    <version>2.4.0</version>
+		</dependency>
 
     </dependencies>
 
@@ -109,6 +99,12 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
+            <plugin>
+			  <groupId>org.sonarsource.scanner.maven</groupId>
+			  <artifactId>sonar-maven-plugin</artifactId>
+			  <version>3.9.1.2184</version>
+			</plugin>
+
 
             <!-- Spring Boot Maven Plugin -->
             <plugin>
