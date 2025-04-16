@@ -1,4 +1,4 @@
-package com.example.demo.ErResp;
+package com.example.demo.ErrorResp;
 
 import java.time.LocalDateTime;
 

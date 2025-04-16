@@ -6,6 +6,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -24,13 +27,12 @@ public class Student {
 	@Column(name = "sid")
 	private Integer stdId;
 
-	// @NotNull(message = "NAME CAN NOT BE NULL")
-	// @NotEmpty(message = "STUDENT NAME CANNOT BE EMPTY")
-	//	@NotBlank(message = "BLANK ARE NOT ALLOWED")
+	@NotNull(message = "NAME CAN NOT BE NULL")
+	@NotEmpty(message = "STUDENT NAME CANNOT BE EMPTY")
+	@NotBlank(message = "BLANK ARE NOT ALLOWED")
 	@Size(min = 2, max = 20, message = "NAME MUST BE 2-6 CHARACTERS ONLY")
-	@Pattern(regexp = "[A-Za-z]{2,6}", message = "ONLY CAPITAL LETTER ALLOWED")
+	@Pattern(regexp = "[A-Za-z]{2,10}", message = "ONLY CAPITAL LETTER ALLOWED")
 	private String stdName;
-
 	private String stdGen;
 	private String stdMail;
 	private String stdCourse;

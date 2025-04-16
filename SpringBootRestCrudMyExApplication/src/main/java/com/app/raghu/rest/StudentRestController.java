@@ -47,7 +47,7 @@ public class StudentRestController {
 	}
 
 	// 3. fetch one by id
-	@GetMapping("/find/{id}")
+	@GetMapping("/fetch/{id}")
 	public ResponseEntity<Student> fetchOneById(@PathVariable("id") Integer id) {
 
 		ResponseEntity<Student> response = null;
@@ -62,7 +62,7 @@ public class StudentRestController {
 		return response;
 	}
 
-	// 4. remove one by id
+	// 4. Remove one by id
 	@DeleteMapping("/remove/{id}")
 	public ResponseEntity<String> deleteStudent(@PathVariable Integer id) {
 		ResponseEntity<String> response = null;
@@ -80,7 +80,6 @@ public class StudentRestController {
 	// 5. update student
 	@PutMapping("/modify")
 	public ResponseEntity<String> updateStudent(@RequestBody Student student) {
-
 		ResponseEntity<String> response = null;
 
 		try {
